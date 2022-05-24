@@ -1,0 +1,105 @@
+/*
+ 
+ThatsNiceGuy Tech Garbage Stylesheet
+For files.thatsniceguy.com, pages hosted on the files subdomain, and minecraft.thatsniceguy.com
+Not for thatsniceguy.com, main.thatsniceguy.com or repo.thatsniceguy.com
+ 
+v2022.0314.0
+*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+/* Prevent font scaling in landscape while still allowing user zoom */
+}
+
+body {
+    background-color:#ffffff;
+}
+
+@supports(margin: max(0px)) {
+    body {
+        margin-left: max(8px, env(safe-area-inset-left));
+        margin-right: max(8px, env(safe-area-inset-right));
+    }
+/* handles safe area for notched iphones */
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.center {
+    text-align: center
+}
+
+.centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+/* use to center images */
+}
+
+.responsiveorigsize {
+    max-width: 100%;
+    height: auto;
+/* scale down when needed but do not scale bigger than the original size */
+}
+
+.responsiveimg858 {
+    width: 100%;
+    max-width: 858.4px;
+    height: auto;
+/* scale down when needed but limit width to 858.4px, this is used on minecraft.thatsniceguy.com */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+}
+    
+.link {
+    color:#E872E2;
+}
+
+hr.solid {
+    height: 1px;
+    background-color: #000000;
+    /*border-top: 2px solid #ababab;*/
+}
+
+@supports(padding:max(0px)) {
+    body, header, footer {
+        padding-left: min(0vmin, env(safe-area-inset-left));
+        padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+}
+
+/* the below applies when dark mode is enabled :fr:*/
+@media (prefers-color-scheme: dark) {
+      * {
+          color:#FFFFFF;
+      }
+    
+      body {
+          background-color:#000000;
+      }
+      
+      .footer {
+          background-color: rgba(0, 0, 0, 0.85);
+      }
+      
+      hr.solid {
+          height: 1px;
+          background-color: #FFFFFF;
+      }
+}
